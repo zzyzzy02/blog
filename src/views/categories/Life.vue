@@ -54,18 +54,17 @@ onMounted(async () => {
 }
 
 /* 使用深度选择器 ::v-deep 或 :deep() 来穿透 scoped 样式 */
-::v-deep .markdown-content p {
+:deep(.markdown-content p) {
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* 添加颜色过渡 */
   margin: 1em 0;
   padding: 4px 0;
   color: white; /* 默认文字颜色 */
 }
 
-::v-deep .markdown-content p:hover {
+:deep(.markdown-content p:hover) {
   transform: scale(1.05); /* 放大比例可调 */
   color: #42b983; /* 悬停时的文字颜色 */
 }
-
 .markdown-content h1,
 .markdown-content h2,
 .markdown-content h3 {
